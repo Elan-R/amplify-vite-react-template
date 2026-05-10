@@ -6,7 +6,7 @@ import { useAuthenticator } from "@aws-amplify/ui-react";
 const client = generateClient<Schema>();
 
 function App() {
-  const { user, signOut } = useAuthenticator();
+  const { user } = useAuthenticator();
   const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
 
   useEffect(() => {
